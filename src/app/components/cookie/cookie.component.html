@@ -1,0 +1,31 @@
+<!-- ===========================================
+    
+    
+    
+    
+    ============================ -->
+
+<div id="selectors">
+  <select class="form-control" id="update" [(ngModel)]="CookieSelector">
+    <option *ngFor="let Cookie of Cookies" [ngValue]="Cookie">
+      {{ Cookie.name }}
+    </option>
+  </select>
+
+  <select
+    class="form-control"
+    id="updColour"
+    [(ngModel)]="CookieSelector.color"
+  >
+    <option *ngFor="let key of keys" [ngValue]="key">
+      {{ Colors[key] }}
+    </option>
+  </select>
+</div>
+
+<div id="buttons">
+  <button (click)="addChips()">Add Chips</button>
+  <button id="ChangeColor">Change Cookie Color</button>
+</div>
+
+<div id="cookiesDiv"></div>
